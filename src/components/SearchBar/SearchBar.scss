@@ -1,0 +1,53 @@
+.searchbar-container {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    form {
+        display: block;
+        margin-top: 30px;
+        position: relative;
+        top: 0;
+        left: 0;
+        label {
+            input {
+                display: inline-block;
+                border-style: 1px solid black;
+                border-radius: 30px;
+                height: 46px;
+                width: 100%;
+                padding-left: 1em;
+            }
+            input:focus {
+                outline: none;
+            }
+        }
+        button {
+            display: inline-flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            height: 46px;
+            padding: 10px 26px;
+            border: none;
+            border-radius: 30px;
+            top: 0;
+            right: -1px;
+            position: absolute;
+            background: #333;
+            color: rgba(255,255,255, 1);
+            -webkit-user-select: none;
+               -moz-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
+        }
+        button:active, button:focus {
+            outline: none;
+        }
+        button:active {
+            background: rgb(209, 86, 86);
+        }
+        button:hover {
+            cursor: pointer;
+        }
+    }
+}

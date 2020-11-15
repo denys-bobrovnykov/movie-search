@@ -1,0 +1,25 @@
+.popular-section {
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    z-index: 100;
+    h2 {
+        display: flex;
+        margin-left: 40px;
+    }
+    .scroller {
+        align-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 20px;
+        overflow-x: scroll;
+        padding-bottom: 20px;
+        .scroller-spacer {
+            display: flex;
+            min-width: 20px;
+            height: 225px;
+        }
+    }
+}

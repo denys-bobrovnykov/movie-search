@@ -1,0 +1,57 @@
+$circle_d: 40px;
+$circle_background: #000;
+$min-width: 150px;
+
+.card {
+  align-content: flex-start;
+  color: black;
+  display: inline-flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  margin-left: 20px;
+  width: 150px;
+  overflow: hidden;
+  .card-image {
+    display: flex;
+    height: 225px;
+    width: 150px;
+    img {
+      border-radius: 10px;
+      display: flex;
+      max-height: 100%;
+      width: auto;
+    }
+  }
+  .content {
+    align-content: flex-start;
+    display: inline-flex;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    h2 {
+      align-content: flex-start;
+      color: black;
+      display: flex;
+      height: 40px;
+      margin: 0;
+      font-size: 1em;
+      width: 100%;
+    }
+    .circle {
+      background-color: $circle_background;
+      border-radius: 50%;
+      display: block;
+      height: $circle_d;
+      justify-content: center;
+      opacity: 0.8;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      top: -20px;
+      width: $circle_background;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import '../ResultsPage/ResultsPage.scss';
+
+.card-small {
+  border: 1px solid black;
+  border-radius: $borderRad;
+  display: flex;
+  justify-content: flex-start;
+  height: $imageHeight;
+  margin-bottom: $cardMarginBottom;
+  overflow: hidden;
+  .image {
+    display: inline-flex;
+    background: linear-gradient(#666, #333);
+    img {
+      display: block;
+      height: $imageHeight;
+      min-width: 110px;
+      width: auto;
+    }
+  }
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    overflow: hidden;
+    padding: 10px;
+    .title {
+      width: 100%;
+    }
+    .release-date {
+      color: #666;
+    }
+    .description {
+      display: block;
+      align-content: flex-start;
+      width: 100%;
+      p {
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
