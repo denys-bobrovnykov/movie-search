@@ -19,13 +19,24 @@ export const DetailsPage = (props) => {
   const backgroundImage = state.isLoaded
     ? `url("${Urls.backdrop + state.response.backdrop_path}")`
     : '';
+  const posterImage = state.isLoaded ? `${Urls.poster_w300 + state.response.poster_path}` : '';
   const style = {
     backgroundImage: backgroundImage,
+    posterImage: posterImage,
   };
 
   return (
     <section className="DetailsPage">
-      <div className="banner" style={style}></div>
+      <div className="DetailsPage-banner" style={style}>
+        <div className="DetailsPage-banner-inner-content">
+          <img
+            className="DetailsPage-banner-inner-content-poster"
+            src={style.posterImage}
+            alt="poster"
+          />
+          <div className="DetailsPage-banner-inner-content-info"></div>
+        </div>
+      </div>
     </section>
   );
 };

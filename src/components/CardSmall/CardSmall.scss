@@ -8,6 +8,8 @@
   height: $imageHeight;
   margin-bottom: $cardMarginBottom;
   overflow: hidden;
+  min-width: 420px;
+
   .image {
     display: inline-flex;
     background: linear-gradient(#666, #333);
@@ -21,7 +23,7 @@
   .info {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 20px;
+    margin: 10px 20px;
     overflow: hidden;
     padding: 10px;
     .title {

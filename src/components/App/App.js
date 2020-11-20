@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { HomePage } from '../HomePage/HomePage';
 import { Header } from '../Header/Header';
@@ -16,9 +16,11 @@ function App() {
     <Router>
       <HomePageContext.Provider value={{ category, setCategory }}>
         <Header />
-        <Route exact path="/" children={<HomePage />} />
-        <Route path="/details/:type/:id" children={<DetailsPage />} />
-        <Route path="/results/:search_text" children={<ResultsPage />} />
+        <Switch>
+          <Route exact path="/" children={<HomePage />} />
+          <Route path="/details/:type/:id" children={<DetailsPage />} />
+          <Route path="/results/:search_text" children={<ResultsPage />} />
+        </Switch>
       </HomePageContext.Provider>
     </Router>
   );

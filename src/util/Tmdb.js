@@ -4,13 +4,21 @@ const baseUrl = 'https://api.themoviedb.org/3';
 // const trending = baseUrl + '/trending/all/day?api_key=' + key;
 // const popularMovie = baseUrl + `/movie/popular?api_key=${key}&language=en-US&page=1`;
 // const popularTV = baseUrl + `/tv/popular?api_key=${key}&language=en-US&page=1`;
+const sizes = {
+  w300: 'w300',
+  w500: 'w500',
+  w780: 'w780',
+  original: 'original',
+};
 
+const imgUrl = 'https://image.tmdb.org/t/p/';
 export const Urls = {
   trending: baseUrl + '/trending/all/day?api_key=' + key,
   popularMovie: baseUrl + `/movie/popular?api_key=${key}&language=en-US&page=1`,
   popularTV: baseUrl + `/tv/popular?api_key=${key}&language=en-US&page=1`,
-  backdrop: 'https://image.tmdb.org/t/p/w780',
-  poster: 'https://image.tmdb.org/t/p/w500',
+  backdrop: imgUrl + sizes.original,
+  poster: imgUrl + sizes.w500,
+  poster_w300: imgUrl + sizes.w300,
 };
 
 export const baseUrls = {
